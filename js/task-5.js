@@ -3,7 +3,7 @@
 console.log('Задание 5')
 
 class Car {
-  constructor(speed = 0, price, maxSpeed, isOn = false, distance = 0) {
+  constructor({ speed = 0, price, maxSpeed, isOn = false, distance = 0 }) {
     this.speed = speed
     this.price = price
     this.maxSpeed = maxSpeed
@@ -40,14 +40,14 @@ class Car {
     return this.speed
   }
   drive(hours) {
-    if (this.isOn === true) {
+    if (this.isOn) {
       this.distance += hours * this.speed
     }
     return this.distance
   }
 }
 
-const mustang = new Car(200, 2000)
+const mustang = new Car({ maxSpeed: 200, price: 2000 })
 
 mustang.turnOn()
 mustang.accelerate(50)

@@ -19,6 +19,8 @@ class Storage {
   }
 }
 
+//const removeItem = (item) => this.items.filter(el => el !== item)
+
 const storage = new Storage([
   'Нанитоиды',
   'Пролонгер',
